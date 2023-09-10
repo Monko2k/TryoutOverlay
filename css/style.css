@@ -1,0 +1,400 @@
+@font-face {
+    font-family: "Sen-Bold";
+    src: url("../fonts/Sen-Bold.ttf");
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@keyframes scale {        
+	from {
+		font-size: 38px;
+	}
+	to {
+		font-size: 35px;
+	}      
+}
+
+@keyframes shadowscale {        
+	from {
+		font-size: 48px;
+	}
+	to {
+		font-size: 35px;
+	}      
+}
+
+body,html{
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+#staticbg {
+	background:url('../static/bgstatic.png');
+	width: 1920px;
+	height: 1080px;
+	position: absolute;
+	z-index: -10;
+	transition: 300ms;
+}
+
+.mods {
+    position: absolute;
+    top: 8px;
+	right: 0px;
+    width: 500px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    transition: ease-in-out 500ms;
+}
+.mod img {
+    position: relative;
+    height: 15px;
+    width: 25px;
+    z-index: 1;
+    margin-right: 4px;
+    object-fit: cover;
+        
+}
+
+#main{
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+#playerContainer {
+	transition: 300ms;
+	display: flex;
+	width: 1920px;
+	height: 720px;
+	top: 176px;
+	position:absolute;
+	flex-wrap: wrap;
+}
+
+#left {
+	width: 960px;
+	height: 720px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#right {
+	width: 960px;
+	height: 720px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.playerView {
+	font-family: "Roboto-Regular";
+	width: 480px;
+	height: 360px;
+	color: white;
+	position: relative;
+}
+
+.score {
+    position: absolute;
+    top: 2px;
+	right: 2px;
+    font-size: 30px;
+}
+
+.acc {
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    font-size: 18px;
+    color: white;
+    display: flex;
+}
+
+.combo-scale {
+    animation: scale 200ms ease;
+}
+
+.comboShadow-scale {
+    animation: shadowscale 200ms ease;
+}
+
+.combo {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    font-size: 33px;
+    color: white;
+    display: flex;
+}
+
+.comboShadow {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    font-size: 33px;
+    color: white;
+    display: flex;
+    opacity: 0.3;
+}
+
+#footerLobby {
+	position: absolute;
+	bottom: 0px;
+    width: 1920px;
+    height: 202px;
+    transition: ease-in-out 200ms;
+}
+
+#footerGameplay {
+	position: absolute;
+	text-align: center;
+	bottom: 0px;
+    width: 1920px;
+    height: 202px;
+    transition: ease-in-out 200ms;
+	font-size: 18px;
+	font-family: Roboto-Bold;
+	color: black;
+	z-index: 10;
+}
+
+#averageScore {
+	margin-top: 60px;
+	color: black;
+	font-size: 48px;
+	z-index: 3;
+}
+
+#mapBG {
+	position: absolute;
+	left: 26px;
+	bottom: 26px;
+	border-radius: 10px;
+	width: 130px;
+	height: 130px;
+	background-color: black;
+    background-size: cover;
+	z-index: -1;
+	color: white;
+	font-family: Sen-Bold;
+	background-position: 50%, 10%;
+}
+
+#mapContainer {
+	position: absolute;
+	left: 165px;
+	bottom: 26px;
+	width: 440px;
+	height: 130px;
+    background-size: cover;
+	z-index: -1;
+	color: black;
+	font-family: Sen-Bold;
+	background-position: 50%, 10%;
+}
+
+#title {
+	font-size: 50px;
+	color: black;
+	position: absolute;
+	right: 30px;
+	top: 106px;
+	font-family: Roboto-Bold;
+}
+
+#subtitle {
+	font-size: 25px;
+	color: black;
+	position: absolute;
+	right: 30px;
+	top: 82px;
+	font-family: Roboto-Regular;
+}
+
+#overlay {
+	height: 130px;
+	width: 130px;
+	z-index: 0;
+    background-color: rgba(0,0,0,0.20);
+	text-align: center;
+	line-height: 130px;
+}
+
+#timeText {
+	color: white;
+	font-size: 25px;
+}
+
+#mapTitle {
+	font-size: 32px;
+	position: absolute;
+	width: 95%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: "Roboto-Bold";
+	font-weight: 400;
+	z-index: 0;
+}
+
+#mapArtist {
+	position: absolute;
+	top: 40px;
+	font-family: "Roboto-Regular";
+	font-size: 22px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 0;
+}
+
+#mapDifficulty {
+	color: white;
+	bottom: 0px;
+	background-size: cover;
+	background-color: #000;
+	position: absolute;
+	font-family: "Roboto-Regular";
+	font-size: 22px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+	z-index: 0;
+}
+
+#chats {
+	background:rgba(0,0,0,0.6);
+	position: absolute;
+	bottom: 17px;
+	left: 620px;
+	width: 650px;
+	height: 122px;
+	border-radius: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 15px 15px 15px 15px;
+	font-size: 18px;
+    font-family: Sen-Bold;
+    transition: ease-in-out 500ms;
+	z-index: -1;
+	color: white;
+}
+
+.chat {
+	display: flex;
+	text-align: left;
+}
+
+.chatTime {
+	width: 5%;
+	color: #dddddd;
+	padding-right: 10px;
+}
+.wholeChat {
+	width: 95%;
+	display: flex;
+}
+.chatName {
+	color: white;
+	white-space: nowrap;
+	margin-left: 10px;
+	width: max-content;
+}
+.chatText {
+	white-space: normal;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.unknown {
+	color: yellow;
+}
+.bot {
+	color: #FF66AA;
+}
+.right {
+	color: #1871d9;
+}
+.left {
+	color: #f03030;
+}
+
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+	width: 0px;
+	visibility: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    margin-top: 25px;
+    margin-bottom: 25px;
+	visibility: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 10px;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+}
+
+.base-timer {
+    position: absolute;
+	left: 10px;
+	top: 10px;
+    height: 110px;
+    width: 110px;
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 3px;
+    stroke: rgba(255,255,255,0.20);
+}
+
+.base-timer__path-remaining {
+	color: white;
+	stroke-width: 3px;
+
+	stroke-linecap: round;
+
+	transform: rotate(90deg);
+	transform-origin: center;
+
+	transition: 300ms linear all;
+
+	stroke: currentColor;
+}
+
+.base-timer__svg {
+	/* Flips the svg and makes the animation to move left-to-right */
+	transform: scaleX(-1);
+}
+
